@@ -4,6 +4,165 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddCourseActivity">
+    tools:context=".AddCourseActivity"
+    android:paddingRight="20dp"
+    android:paddingLeft="20dp">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/courseName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:hint="Enter Course Name"
+        android:padding="5dp"
+        android:textColorHint="@color/black"
+        app:endIconMode="clear_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/courseNameEtxt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:importantForAutofill="no"
+            android:textSize="14sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/coursePrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Course Price"
+        android:padding="5dp"
+        android:textColorHint="@color/black"
+        app:endIconMode="clear_text"
+        app:layout_constraintEnd_toEndOf="@+id/courseName"
+        app:layout_constraintStart_toStartOf="@+id/courseName"
+        app:layout_constraintTop_toBottomOf="@+id/courseName">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/coursePriceEtxt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:importantForAutofill="no"
+            android:textSize="14sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/courseSuited"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Course Suited for"
+        android:padding="5dp"
+        android:textColorHint="@color/black"
+        app:endIconMode="clear_text"
+        app:layout_constraintEnd_toEndOf="@+id/coursePrice"
+        app:layout_constraintStart_toStartOf="@+id/coursePrice"
+        app:layout_constraintTop_toBottomOf="@+id/coursePrice">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/courseSuitedEtxt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:importantForAutofill="no"
+            android:textSize="14sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/courseImageLink"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Course Image Link"
+        android:padding="5dp"
+        android:textColorHint="@color/black"
+        app:endIconMode="clear_text"
+        app:layout_constraintEnd_toEndOf="@+id/courseSuited"
+        app:layout_constraintStart_toStartOf="@+id/courseSuited"
+        app:layout_constraintTop_toBottomOf="@+id/courseSuited">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/courseImageLinkEtxt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:importantForAutofill="no"
+            android:textSize="14sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/courseLink"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Course Link"
+        android:padding="5dp"
+        android:textColorHint="@color/black"
+        app:endIconMode="clear_text"
+        app:layout_constraintEnd_toEndOf="@+id/courseImageLink"
+        app:layout_constraintStart_toStartOf="@+id/courseImageLink"
+        app:layout_constraintTop_toBottomOf="@+id/courseImageLink">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/courseLinkEtxt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:importantForAutofill="no"
+            android:textSize="14sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/courseDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Course Description"
+        android:padding="5dp"
+        android:textColorHint="@color/black"
+        app:endIconMode="clear_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/courseLink"
+        app:layout_constraintTop_toBottomOf="@+id/courseLink">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/courseDescEtxt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:importantForAutofill="no"
+            android:textSize="14sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/addCourseBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:backgroundTint="@color/white"
+        android:text="ADD COURSE"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/courseDesc"
+        app:layout_constraintStart_toStartOf="@+id/courseDesc"
+        app:layout_constraintTop_toBottomOf="@+id/courseDesc"
+        app:strokeColor="#000000"
+        app:strokeWidth="1dp" />
+
+    <ProgressBar
+        android:id="@+id/loadingPro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:indeterminateDrawable="@drawable/progress_back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
